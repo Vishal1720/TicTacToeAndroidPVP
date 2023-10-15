@@ -2,6 +2,7 @@ package com.example.second;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -118,18 +119,28 @@ if(!gameend) {
             }
         }
         TextView turnnwin=findViewById(R.id.turnnwin);
-        if(fullbox == true) {
-            turnnwin.setText("No One Wins");
-            gameend=true;
+        if(!gameend) {
+            if (fullbox == true) {
+                turnnwin.setText("No One Wins");
+                gameend = true;
+            }
         }
-        if(p1win==true)
-            p1stat++;
-        else if (p2win==true)
-            p2stat++;
-        p1.setText("P1:"+p1stat);
-        p2.setText("P2:"+p2stat);
-    }
 
+
+            if (p1win == true)
+                p1stat++;
+            else if (p2win == true)
+                p2stat++;
+            p1.setText("P1:" + p1stat);
+            p2.setText("P2:" + p2stat);
+
+    }
+ public void navigate(View v)
+ {
+     Intent i=new Intent(this, botvsplayer.class);
+     startActivity(i);
+
+ }
 
 
 }
