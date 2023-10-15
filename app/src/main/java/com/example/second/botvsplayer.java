@@ -43,7 +43,7 @@ public class botvsplayer extends AppCompatActivity {
                 textView.setText(c);
                 checkwinall();
                 if(!gameend)
-                botvalue();
+                allbotself();
                 checkwinall();
                 if(gameend)//if game has ended then calculating stat
                 calcstat();
@@ -52,20 +52,68 @@ public class botvsplayer extends AppCompatActivity {
         }
     }
 
-    public void botvalue(){
-    Random rand=new Random();
-    int i=rand.nextInt(9);
-    boolean checkingempty=checkEmpty();
-    if(checkingempty)
-{   if(boxes.get(i).getText().toString().isEmpty())//checking whether box is empty
-    {boxes.get(i).setText("X");
+    public void randomval() {
+        Random rand = new Random();
+        int i = rand.nextInt(9);
+        boolean checkingempty = checkEmpty();
+        if (checkingempty) {
+            {
+                if (boxes.get(i).getText().toString().isEmpty())//checking whether box is empty
+                {
+                    boxes.get(i).setText("X");
+                } else {
+                    randomval();//again generating random value
+                }
+            }
+        }
     }
-    else
+
+    public boolean botself(TextView t1,TextView t2,TextView t3,String c)//fourth var c for using it for stopping opponent
+    {//temporary not implemented yet
+        if(t1.getText().toString().equals(c) && t2.getText().toString().equals(c)  && t3.getText().toString().isEmpty())
+        {
+            t3.setText("X");
+            return false;//it means no need to check for next since we got the value
+        }
+        else if(t2.getText().toString().equals(c) && t3.getText().toString().equals(c)  && t1.getText().toString().isEmpty())
+        {
+            t1.setText("X");
+            return false;
+        }
+        else if(t1.getText().toString().equals(c) && t3.getText().toString().equals(c)  && t2.getText().toString().isEmpty())
+        {
+            t2.setText("X");
+            return false;
+        }
+        else return  true;
+    }
+
+    public void allbotself()
     {
-        botvalue();//again generating random value
+        boolean a=true;
+        if(boxes.get(4).getText().toString().isEmpty()){a=false;
+            boxes.get(4).setText("X");}
+        if(a)a=botself(boxes.get(0),boxes.get(1),boxes.get(2),"O");
+        if(a)a=botself(boxes.get(3),boxes.get(4),boxes.get(5),"O");
+        if(a)a=botself(boxes.get(6),boxes.get(7),boxes.get(8),"O");
+        if(a)a=botself(boxes.get(0),boxes.get(4),boxes.get(8),"O");
+        if(a)a=botself(boxes.get(6),boxes.get(4),boxes.get(2),"O");
+        if(a)a=botself(boxes.get(0),boxes.get(3),boxes.get(6),"O");
+        if(a)a=botself(boxes.get(1),boxes.get(4),boxes.get(7),"O");
+        if(a)a=botself(boxes.get(2),boxes.get(5),boxes.get(8),"O");
+
+        if(a)a=botself(boxes.get(0),boxes.get(1),boxes.get(2),"X");
+        if(a)a=botself(boxes.get(3),boxes.get(4),boxes.get(5),"X");
+        if(a)a=botself(boxes.get(6),boxes.get(7),boxes.get(8),"X");
+        if(a)a=botself(boxes.get(0),boxes.get(4),boxes.get(8),"X");
+        if(a)a=botself(boxes.get(6),boxes.get(4),boxes.get(2),"X");
+        if(a)a=botself(boxes.get(0),boxes.get(3),boxes.get(6),"X");
+        if(a)a=botself(boxes.get(1),boxes.get(4),boxes.get(7),"X");
+        if(a)a=botself(boxes.get(2),boxes.get(5),boxes.get(8),"X");
+        if(a)randomval();
+
     }
-}   }
-        public void checkwin (TextView v1, TextView v2, TextView v3)
+    public void checkwin (TextView v1, TextView v2, TextView v3)
         {
             TextView turnnwin = findViewById(R.id.turnnwin);
             if (v1.getText().toString().equals("X") && v2.getText().toString().equals("X") && v3.getText().toString().equals("X")) {

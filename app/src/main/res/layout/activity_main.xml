@@ -35,7 +35,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="566dp"
-        android:text="Player 1 turn"
+        android:text="Player 1's turn"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#1A237E"
