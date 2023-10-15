@@ -71,7 +71,7 @@
         android:layout_marginBottom="400dp"
         android:background="#070707"
         android:ems="10"
-        android:contentDescription="textbox1"
+
 
         android:onClick="clicker"
         android:textAlignment="center"
@@ -202,16 +202,16 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="225dp"
-        android:layout_height="99sp"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="102dp"
         android:backgroundTint="#1A237E"
         android:onClick="retry"
         android:text="Retry"
-        android:textSize="44sp" />
+        android:textSize="40sp"/>
 
     <TextView
         android:id="@+id/p1stat"
@@ -247,8 +247,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="97dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="#995bdd"
         android:onClick="navigate"
         android:text="BOT VS Player"

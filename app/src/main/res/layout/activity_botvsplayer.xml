@@ -202,16 +202,16 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="225dp"
-        android:layout_height="99sp"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="102dp"
         android:backgroundTint="#1A237E"
         android:onClick="retry"
         android:text="Retry"
-        android:textSize="44sp" />
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/p1stat"
@@ -235,7 +235,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="521dp"
-        android:text="P2:0"
+        android:text="BOT:0"
         android:textAlignment="center"
         android:textColor="#1A237E"
         android:textSize="28sp"
@@ -247,11 +247,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="31dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="35dp"
+        android:backgroundTint="#995bdd"
         android:onClick="navpvp"
         android:text="Player Vs Player"
-        android:backgroundTint="#995bdd"
         android:textSize="27sp" />
 
 </RelativeLayout>
