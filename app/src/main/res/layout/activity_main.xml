@@ -57,7 +57,8 @@
         android:onClick="clicker"
         android:textAlignment="center"
         android:textColor="#F1EBEB"
-        android:textSize="68sp"
+        android:textSize="70sp"
+
         android:textStyle="bold" />
 
     <TextView
@@ -75,7 +76,7 @@
         android:onClick="clicker"
         android:textAlignment="center"
         android:textColor="#F1EBEB"
-        android:textSize="68sp"
+        android:textSize="70sp"
         android:textStyle="bold" />
 
     <TextView
@@ -92,7 +93,7 @@
         android:onClick="clicker"
         android:textAlignment="center"
         android:textColor="#F1EBEB"
-        android:textSize="68sp"
+        android:textSize="70sp"
         android:textStyle="bold" />
 
     <TextView
@@ -102,14 +103,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="252dp"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="303dp"
         android:background="#070707"
         android:ems="10"
 
         android:onClick="clicker"
         android:textAlignment="center"
         android:textColor="#F1EBEB"
-        android:textSize="68sp"
+        android:textSize="70sp"
         android:textStyle="bold" />
 
     <TextView
@@ -119,13 +120,13 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="155dp"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="303dp"
         android:background="#070707"
         android:ems="10"
         android:onClick="clicker"
         android:textAlignment="center"
         android:textColor="#F1EBEB"
-        android:textSize="68sp"
+        android:textSize="70sp"
         android:textStyle="bold" />
 
     <TextView
@@ -135,7 +136,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="58dp"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="303dp"
         android:background="#070707"
         android:ems="10"
 
@@ -143,7 +144,7 @@
         android:textAlignment="center"
         android:textColor="#F1EBEB"
 
-        android:textSize="68sp"
+        android:textSize="70sp"
         android:textStyle="bold" />
 
     <TextView
@@ -153,7 +154,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="252dp"
-        android:layout_marginBottom="181dp"
+        android:layout_marginBottom="206dp"
         android:background="#070707"
         android:ems="10"
         android:contentDescription="textbox6"
@@ -161,7 +162,7 @@
         android:onClick="clicker"
         android:textAlignment="center"
         android:textColor="#F1EBEB"
-        android:textSize="68sp"
+        android:textSize="70sp"
         android:textStyle="bold" />
 
     <TextView
@@ -171,14 +172,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="155dp"
-        android:layout_marginBottom="181dp"
+        android:layout_marginBottom="206dp"
         android:background="#070707"
         android:ems="10"
 
         android:onClick="clicker"
         android:textAlignment="center"
         android:textColor="#F1EBEB"
-        android:textSize="68sp"
+        android:textSize="70sp"
         android:textStyle="bold" />
 
     <TextView
@@ -188,14 +189,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="58dp"
-        android:layout_marginBottom="181dp"
+        android:layout_marginBottom="206dp"
         android:background="#070707"
         android:ems="10"
 
         android:onClick="clicker"
         android:textAlignment="center"
         android:textColor="#F1EBEB"
-        android:textSize="68sp"
+        android:textSize="70sp"
         android:textStyle="bold" />
 
 
