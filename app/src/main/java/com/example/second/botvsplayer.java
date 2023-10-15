@@ -2,6 +2,7 @@ package com.example.second;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -144,6 +145,12 @@ public void calcstat(){
         gameend=false;
         TextView turnnwin=findViewById(R.id.turnnwin);
         turnnwin.setText("Player VS BOT");
+    }
+    public void navpvp(View v)
+    {
+        Intent intent=new Intent(this, MainActivity.class);
+        startActivity(intent);
+
     }
     }
 
