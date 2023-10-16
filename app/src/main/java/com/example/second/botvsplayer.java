@@ -42,8 +42,7 @@ public class botvsplayer extends AppCompatActivity {
             if (currentText.isEmpty()) {
                 textView.setText(c);
                 checkwinall();
-                if(!gameend)
-                allbotself();
+                if(!gameend) allbotself();
                 checkwinall();
                 if(gameend)//if game has ended then calculating stat
                 calcstat();
