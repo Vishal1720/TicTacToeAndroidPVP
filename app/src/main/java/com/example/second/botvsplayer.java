@@ -204,7 +204,7 @@ public void calcstat(){
     }
     public void navpvp(View v)
     {
-        Intent intent=new Intent(this, MainActivity.class);
+        Intent intent=new Intent(this,playerVsPlayerForm.class);
         startActivity(intent);
 
     }

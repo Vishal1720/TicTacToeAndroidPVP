@@ -19,6 +19,8 @@ private String c="O";
     private int p2stat=0;
     private boolean p1win=false;
     private boolean p2win=false;
+    private String p1name;
+    private String p2name;
 
 
 
@@ -27,6 +29,14 @@ private String c="O";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        p1name=getIntent().getStringExtra("p1");
+        p2name=getIntent().getStringExtra("p2");
+
+        TextView p1=findViewById(R.id.p1stat);
+        p1.setText(p1name);
+        TextView p2=findViewById(R.id.p2stat);
+        p2.setText(p2name);
         boxes.add(findViewById(R.id.text0));
         boxes.add(findViewById(R.id.text1));
         boxes.add(findViewById(R.id.text2));
@@ -55,10 +65,10 @@ if(!gameend) {
 
         if (c == "O") {
             c = "X";
-            turnnwin.setText("Player 2's turn ");
+            turnnwin.setText( p2name+"'s turn ");
         } else {
             c = "O";
-            turnnwin.setText("Player 1's turn ");
+            turnnwin.setText(p1name+"'s turn ");
         }
         checkwinall();
     }
@@ -77,7 +87,7 @@ if(!gameend) {
     gameend=false;
     c="O";
         TextView turnnwin=findViewById(R.id.turnnwin);
-        turnnwin.setText("Player 1's turn");
+        turnnwin.setText(p1name+"'s turn");
     }
     public void checkwin(TextView v1,TextView v2,TextView v3)
     {
@@ -85,13 +95,13 @@ if(!gameend) {
         if(v1.getText().toString().equals("X")&& v2.getText().toString().equals("X")&& v3.getText().toString().equals("X"))
         {
             p2win=true;
-            turnnwin.setText("Player 2 WINS");
+            turnnwin.setText(p2name+" WINS");
             gameend=true;
         }
         if(v1.getText().toString().equals("O")&& v2.getText().toString().equals("O")&& v3.getText().toString().equals("O"))
         {
             p1win=true;
-            turnnwin.setText("Player 1 WINS");
+            turnnwin.setText(p1name+" WINS");
             gameend=true;
         }
     }
@@ -131,8 +141,8 @@ if(!gameend) {
                 p1stat++;
             else if (p2win == true)
                 p2stat++;
-            p1.setText("P1:" + p1stat);
-            p2.setText("P2:" + p2stat);
+            p1.setText(p1name+":" + p1stat);
+            p2.setText(p2name+":" + p2stat);
 
     }
  public void navigate(View v)

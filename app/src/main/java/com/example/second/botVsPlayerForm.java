@@ -19,7 +19,7 @@ public class botVsPlayerForm extends AppCompatActivity {
     {
         String text;
         EditText t1;
-        t1=findViewById(R.id.bvptxtbox);
+        t1=findViewById(R.id.player1txtbox);
         text=t1.getText().toString();
         if(t1.getText().toString().isEmpty())
         {
