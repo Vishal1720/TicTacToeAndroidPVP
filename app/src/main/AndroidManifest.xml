@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Second"
         tools:targetApi="31">
         <activity
+            android:name=".botVsPlayerForm"
+            android:exported="false" />
+        <activity
             android:name=".botvsplayer"
             android:exported="false" />
         <activity

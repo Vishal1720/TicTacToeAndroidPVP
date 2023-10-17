@@ -137,7 +137,7 @@ if(!gameend) {
     }
  public void navigate(View v)
  {
-     Intent i=new Intent(this, botvsplayer.class);
+     Intent i=new Intent(this, botVsPlayerForm.class);
      startActivity(i);
 
  }

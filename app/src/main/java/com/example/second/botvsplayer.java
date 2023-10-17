@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -20,6 +22,7 @@ public class botvsplayer extends AppCompatActivity {
     private int bstat=0;
     private boolean pwin=false;
     private boolean bwin=false;
+    private String pname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,10 @@ public class botvsplayer extends AppCompatActivity {
         boxes.add(findViewById(R.id.text6));
         boxes.add(findViewById(R.id.text7));
         boxes.add(findViewById(R.id.text8));
+         pname="P1";
+        pname=getIntent().getStringExtra("key");
+        TextView p1stat=findViewById(R.id.p1stat);
+        p1stat.setText(pname);
     }
     public void clicker(View v) {
         TextView turnnwin = findViewById(R.id.turnnwin);
@@ -178,7 +185,7 @@ public void calcstat(){
         pstat++;
     else if (bwin == true)
         bstat++;
-    p1.setText("P1:" + pstat);
+    p1.setText(pname+":"+ pstat);
     p2.setText("Bot:" + bstat);
 }
     public void retry(View v)
