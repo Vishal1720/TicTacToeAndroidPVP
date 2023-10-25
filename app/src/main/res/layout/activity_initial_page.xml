@@ -29,24 +29,28 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="match_parent"
-        android:layout_height="106dp"
+
+        android:layout_width="382dp"
+        android:layout_height="93dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="362dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="354dp"
+        android:backgroundTint="@color/black"
         android:onClick="gotobvpform"
         android:text="Bot Vs Player"
+        android:textColorHighlight="#503232"
         android:textSize="40sp" />
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="match_parent"
-        android:layout_height="106dp"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="179dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="241dp"
+        android:backgroundTint="@color/black"
         android:onClick="gotopvpform"
         android:text="Player Vs Player"
         android:textSize="40sp" />

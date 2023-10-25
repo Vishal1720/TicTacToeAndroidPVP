@@ -14,21 +14,21 @@
         tools:ignore="ExtraText"
         tools:targetApi="31">
         <activity
+            android:name=".levelsInGame"
+            android:exported="false" />
+        <activity
             android:name=".initialPage"
-            android:exported="true" ><!-- changed exported as  true from false -->
+            android:exported="true"> <!-- changed exported as  true from false -->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter><!-- added intent-filter here so default page is changed -->
+            </intent-filter> <!-- added intent-filter here so default page is changed -->
         </activity>
         <activity
             android:name=".playerVsPlayerForm"
-            android:exported="false">
-
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".botVsPlayerForm"
             android:exported="false" />

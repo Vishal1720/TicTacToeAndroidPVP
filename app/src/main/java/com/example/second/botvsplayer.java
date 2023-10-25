@@ -23,6 +23,7 @@ public class botvsplayer extends AppCompatActivity {
     private boolean pwin=false;
     private boolean bwin=false;
     private String pname;
+    private String mode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,8 @@ public class botvsplayer extends AppCompatActivity {
         boxes.add(findViewById(R.id.text8));
          pname="P1";
         pname=getIntent().getStringExtra("key");
+        mode=getIntent().getStringExtra("mode");
+
         TextView p1stat=findViewById(R.id.p1stat);
         p1stat.setText(pname);
     }
@@ -95,30 +98,54 @@ public class botvsplayer extends AppCompatActivity {
     }
 
     public void allbotself()
-    {
-        boolean a=true;
+    {boolean a=true;
+
+        if(mode.equals("easy"))
+        {
+            if(a)randomval();
+        }
+        else  if(mode.equals("normal"))
+        {
         if(boxes.get(4).getText().toString().isEmpty()){a=false;
-            boxes.get(4).setText("X");}
-        if(a)a=botself(boxes.get(0),boxes.get(1),boxes.get(2),"X");
-        if(a)a=botself(boxes.get(3),boxes.get(4),boxes.get(5),"X");
-        if(a)a=botself(boxes.get(6),boxes.get(7),boxes.get(8),"X");
-        if(a)a=botself(boxes.get(0),boxes.get(4),boxes.get(8),"X");
-        if(a)a=botself(boxes.get(6),boxes.get(4),boxes.get(2),"X");
-        if(a)a=botself(boxes.get(0),boxes.get(3),boxes.get(6),"X");
-        if(a)a=botself(boxes.get(1),boxes.get(4),boxes.get(7),"X");
-        if(a)a=botself(boxes.get(2),boxes.get(5),boxes.get(8),"X");
+            boxes.get(4).setText("X");
+        }
+            if(a)a=botself(boxes.get(0),boxes.get(1),boxes.get(2),"O");
+            if(a)a=botself(boxes.get(3),boxes.get(4),boxes.get(5),"O");
+            if(a)a=botself(boxes.get(6),boxes.get(7),boxes.get(8),"O");
+            if(a)a=botself(boxes.get(0),boxes.get(4),boxes.get(8),"O");
+            if(a)a=botself(boxes.get(6),boxes.get(4),boxes.get(2),"O");
+            if(a)a=botself(boxes.get(0),boxes.get(3),boxes.get(6),"O");
+            if(a)a=botself(boxes.get(1),boxes.get(4),boxes.get(7),"O");
+            if(a)a=botself(boxes.get(2),boxes.get(5),boxes.get(8),"O");
+            if(a)randomval();
 
-        if(a)a=botself(boxes.get(0),boxes.get(1),boxes.get(2),"O");
-        if(a)a=botself(boxes.get(3),boxes.get(4),boxes.get(5),"O");
-        if(a)a=botself(boxes.get(6),boxes.get(7),boxes.get(8),"O");
-        if(a)a=botself(boxes.get(0),boxes.get(4),boxes.get(8),"O");
-        if(a)a=botself(boxes.get(6),boxes.get(4),boxes.get(2),"O");
-        if(a)a=botself(boxes.get(0),boxes.get(3),boxes.get(6),"O");
-        if(a)a=botself(boxes.get(1),boxes.get(4),boxes.get(7),"O");
-        if(a)a=botself(boxes.get(2),boxes.get(5),boxes.get(8),"O");
+} else if (mode.equals("hard")) {
+                if(boxes.get(4).getText().toString().isEmpty()){a=false;
+                    boxes.get(4).setText("X");}
+
+                if(a)a=botself(boxes.get(0),boxes.get(1),boxes.get(2),"O");
+                if(a)a=botself(boxes.get(3),boxes.get(4),boxes.get(5),"O");
+                if(a)a=botself(boxes.get(6),boxes.get(7),boxes.get(8),"O");
+                if(a)a=botself(boxes.get(0),boxes.get(4),boxes.get(8),"O");
+                if(a)a=botself(boxes.get(6),boxes.get(4),boxes.get(2),"O");
+                if(a)a=botself(boxes.get(0),boxes.get(3),boxes.get(6),"O");
+                if(a)a=botself(boxes.get(1),boxes.get(4),boxes.get(7),"O");
+                if(a)a=botself(boxes.get(2),boxes.get(5),boxes.get(8),"O");
+
+                if(a)a=botself(boxes.get(0),boxes.get(1),boxes.get(2),"X");
+                if(a)a=botself(boxes.get(3),boxes.get(4),boxes.get(5),"X");
+                if(a)a=botself(boxes.get(6),boxes.get(7),boxes.get(8),"X");
+                if(a)a=botself(boxes.get(0),boxes.get(4),boxes.get(8),"X");
+                if(a)a=botself(boxes.get(6),boxes.get(4),boxes.get(2),"X");
+                if(a)a=botself(boxes.get(0),boxes.get(3),boxes.get(6),"X");
+                if(a)a=botself(boxes.get(1),boxes.get(4),boxes.get(7),"X");
+                if(a)a=botself(boxes.get(2),boxes.get(5),boxes.get(8),"X");
+
+                if(a)randomval();
+        }
 
 
-        if(a)randomval();
+
 
     }
     public void checkwin (TextView v1, TextView v2, TextView v3)

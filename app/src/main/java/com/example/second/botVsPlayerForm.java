@@ -26,7 +26,7 @@ public class botVsPlayerForm extends AppCompatActivity {
             Toast.makeText(this, "Please enter your name ", Toast.LENGTH_SHORT).show();
         }
         else {
-            Intent j = new Intent(this, botvsplayer.class);
+            Intent j = new Intent(this, levelsInGame.class);
             j.putExtra("key", text);//key used to access it on next page
             startActivity(j);
         }
