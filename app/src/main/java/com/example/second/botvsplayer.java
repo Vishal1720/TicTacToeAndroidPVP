@@ -139,9 +139,7 @@ public class botvsplayer extends AppCompatActivity {
             if(a)a=botself(boxes.get(0),boxes.get(3),boxes.get(6),"O");
             if(a)a=botself(boxes.get(1),boxes.get(4),boxes.get(7),"O");
             if(a)a=botself(boxes.get(2),boxes.get(5),boxes.get(8),"O");
-
-
-                if(a)randomval();
+            if(a)randomval();
         }
 
 
